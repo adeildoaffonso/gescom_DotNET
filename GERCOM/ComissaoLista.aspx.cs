@@ -52,7 +52,7 @@ namespace GESCOM
             DataTable dt = new DataTable();
             dt.Columns.Add();
 
-            dt.Columns.Add("Código");
+            dt.Columns.Add("CÓDIGO");
             dt.Columns.Add("Segurado");
             dt.Columns.Add("Ramo");
             dt.Columns.Add("Valor Liquido");
