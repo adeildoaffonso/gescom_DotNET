@@ -20,10 +20,10 @@ namespace GESCOM
         {
             if (e.Row.RowType == DataControlRowType.Header)
             {
-                e.Row.Cells[0].Text = "Código";
-                e.Row.Cells[1].Text = "Segurado";
-                e.Row.Cells[2].Text = "Ramo";
-                e.Row.Cells[3].Text = "Valor Liquido";
+                e.Row.Cells[0].Text = "CÓDIGO";
+                e.Row.Cells[1].Text = "SEGURADO";
+                e.Row.Cells[2].Text = "RAMO";
+                e.Row.Cells[3].Text = "VALOR LÍQUIDO";
             }
             else if (e.Row.RowType == DataControlRowType.DataRow)
             {
