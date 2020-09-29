@@ -458,7 +458,6 @@
     </Compile>
     <Compile Include="repositorio\CorretorRepositorio.cs" />
     <Compile Include="Models\entidade\corretor_tb.cs" />
-    <Compile Include="CotacaoRepositorio.cs" />
     <Compile Include="CotacaoDetalhe.aspx.cs">
       <DependentUpon>CotacaoDetalhe.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -475,9 +474,11 @@
     </Compile>
     <Compile Include="Models\entidade\dados_bancarios_tb.cs" />
     <Compile Include="interfaces\IDetalhe.cs" />
+    <Compile Include="repositorio\CotacaoRepositorio.cs" />
     <Compile Include="repositorio\ListaComissaoRepositorio.cs" />
     <Compile Include="repositorio\ListaCotacaoRepositorio.cs" />
     <Compile Include="repositorio\ListaPropostaParcelaRepositorio.cs" />
+    <Compile Include="repositorio\ListarCotacaoRepositorio.cs" />
     <Compile Include="repositorio\ListarPropostaRepositorio.cs" />
     <Compile Include="repositorio\ListarSeguradoRepositorio.cs" />
     <Compile Include="repositorio\ListaSeguradoraRepositorio.cs" />

@@ -11,7 +11,7 @@ namespace GESCOM.repositorio
     {
         public IEnumerable<corretor_tb> Listar()
         {
-            System.Net.Http.HttpResponseMessage response = new API_GESCOM().Listar("api/corretor/ListarTodos");
+            System.Net.Http.HttpResponseMessage response = new API_GESCOM().Listar("api/corretor/Listar");
 
             //se retornar com sucesso busca os dados
             if (response.IsSuccessStatusCode)

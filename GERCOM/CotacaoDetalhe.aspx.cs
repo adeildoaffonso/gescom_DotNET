@@ -257,36 +257,22 @@ namespace GESCOM
 
             carregarEntidade();
 
-            using (var ctx = new CTX_GERCOM())
-            {
-                try
-                {
-                    ctx.cotacao_tb.Add(cotacao);
-                    ctx.SaveChanges();
-                }
-                catch (Exception ex)
-                {
-                    throw;
-                }
-            }
+            new CotacaoRepositorio().Inserir(cotacao);
+
+            Response.Redirect("CotacaoLista.aspx");
         }
 
         private void alterar()
         {
             using (var ctx = new CTX_GERCOM())
             {
-                cotacao = new CotacaoRepositorio().RecuperarPelaChave(ctx, Convert.ToInt32(Request["id"]));
+                cotacao = new CotacaoRepositorio().RecuperarPelaChave(Convert.ToInt32(Request["id"]));
 
                 carregarEntidade();
 
-                try
-                {
-                    ctx.SaveChanges();
-                }
-                catch (Exception ex)
-                {
-                    throw;
-                }
+                new CotacaoRepositorio().Alterar(cotacao);
+
+                Response.Redirect("CotacaoLista.aspx");
             }
         }
 

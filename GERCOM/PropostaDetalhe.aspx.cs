@@ -37,13 +37,15 @@ namespace GESCOM
             if ((EntityState)ViewState["vsEstado"] == EntityState.Added) inserir();
             else alterar();
 
+            ViewState["vsPropostaID"] = proposta.proposta_id;
+
             Response.Redirect("PropostaLista.aspx");
 
         }
 
         protected void btnComissao_Click(object sender, EventArgs e)
         {
-            Response.Redirect(string.Format("ComissaoDetalhe.aspx?proposta_id={0}", proposta.proposta_id));
+            Response.Redirect(string.Format("ComissaoDetalhe.aspx?proposta_id={0}", (int)ViewState["vsPropostaID"]));
         }
 
         #endregion
@@ -67,6 +69,7 @@ namespace GESCOM
                 txtParcelamento.Text = proposta.parcelamento.ToString();
                 txtPremio.Text = proposta.premio_liquido.ToString();
 
+                ViewState["vsPropostaID"] = proposta.proposta_id;
 
                 if (!string.IsNullOrEmpty(proposta.cotacao_id.ToString())) cotacao_id = proposta.cotacao_id;
 
