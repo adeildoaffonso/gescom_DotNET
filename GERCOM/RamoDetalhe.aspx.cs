@@ -21,7 +21,7 @@ namespace GESCOM
         #region eventos
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack) CarregarTela();
+            if (!Page.IsPostBack) CarregarTela(); 
         }
 
         protected void btnVoltar_Click(object sender, EventArgs e)
